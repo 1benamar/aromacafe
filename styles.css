@@ -337,6 +337,7 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .js [data-desvela].is-visible::before { transform: scaleY(0); }
 .js [data-desvela]:not(.is-visible) { box-shadow: none; }
 .js [data-desvela] img { transform: scale(1.12); transition: transform 1600ms var(--suave); }
+.js [data-desvela]:not(.is-visible) img { opacity: 0; }
 .js [data-desvela].is-visible img { transform: scale(1); }
 
 /* ==========================================================================
