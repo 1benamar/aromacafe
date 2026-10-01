@@ -1,145 +1,149 @@
 ---
 name: Aroma Café Blanes
-description: La web como la etiqueta de una lata de café antigua, en el verde del toldo con mostaza, rojo y azul de cartel.
+description: Carta náutica de la Badia de Blanes dibujada para el café, en colores de café.
 colors:
-  verde: "#1C6040"
-  verde-hondo: "#134630"
-  mostaza: "#F0B830"
-  rojo: "#BF3922"
-  rojo-hondo: "#9C2C18"
-  azul: "#1D3F7A"
-  crema: "#F9F0DA"
-  papel: "#FFF8E8"
-  tinta: "#0F281E"
+  espresso: "#2A1B14"
+  espresso-2: "#5B4639"
+  latte: "#E2CDAA"
+  latte-2: "#D6BC92"
+  crema: "#F1E6D2"
+  crema-2: "#E9DAC0"
+  porcelana: "#FBF7F0"
+  caramelo: "#A8723F"
+  verde: "#1F4D3A"
+  verde-2: "#163828"
 typography:
   display:
-    fontFamily: "Abril Fatface, Rockwell Extra Bold, Georgia, serif"
-    fontSize: "clamp(2.4rem, 5.4vw, 4.4rem)"
+    fontFamily: "Libre Caslon Text, Iowan Old Style, Palatino Linotype, Georgia, serif"
+    fontSize: "clamp(2.4rem, 6vw, 4.4rem)"
     fontWeight: 400
-    lineHeight: 1.02
-  headline:
-    fontFamily: "Abril Fatface, Georgia, serif"
-    fontSize: "clamp(1.9rem, 2.6vw, 2.6rem)"
-    fontWeight: 400
-    lineHeight: 1
-  label:
-    fontFamily: "Antonio, Arial Narrow, sans-serif"
-    fontSize: "1.15rem"
+    lineHeight: 0.98
+  wordmark:
+    fontFamily: "Libre Caslon Text, Georgia, serif"
+    fontSize: "clamp(2.4rem, 5.6vw, 4.6rem)"
     fontWeight: 700
-    letterSpacing: "0.1em"
+    letterSpacing: "0.04em"
+  title:
+    fontFamily: "Libre Caslon Text, Georgia, serif"
+    fontSize: "1.25rem"
+    fontWeight: 400
+    lineHeight: 1.3
   body:
     fontFamily: "Jost, Segoe UI, system-ui, sans-serif"
     fontSize: "1.0625rem"
     fontWeight: 400
-    lineHeight: 1.55
+    lineHeight: 1.6
+  label:
+    fontFamily: "Jost, system-ui, sans-serif"
+    fontSize: "0.8125rem"
+    fontWeight: 600
+    letterSpacing: "0.16em"
 rounded:
-  base: "2px"
+  base: "0"
 spacing:
-  margen: "clamp(1.25rem, 4vw, 3rem)"
-  seccion: "clamp(3.5rem, 7vw, 6rem)"
-  ancho: "90rem"
+  margen: "clamp(1rem, 4vw, 3rem)"
+  seccion: "clamp(3rem, 8vw, 6.5rem)"
+  ancho: "1180px"
 components:
-  boton:
-    backgroundColor: "{colors.mostaza}"
-    textColor: "{colors.tinta}"
-    typography: "{typography.label}"
-    padding: "1rem 1.35rem"
-  boton-hover:
-    backgroundColor: "{colors.crema}"
-  boton-azul:
-    backgroundColor: "{colors.azul}"
-    textColor: "{colors.crema}"
-  boton-azul-hover:
-    backgroundColor: "{colors.rojo}"
+  llamar:
+    backgroundColor: "{colors.verde}"
+    textColor: "{colors.porcelana}"
+    padding: "0.85rem 1.4rem"
+  llamar-hover:
+    backgroundColor: "{colors.verde-2}"
+  llamar-oscuro:
+    backgroundColor: "{colors.espresso}"
+    textColor: "{colors.porcelana}"
 ---
 
 # Design System: Aroma Café Blanes
 
 ## Overview
 
-**Creative North Star: "La lata de Aroma"**
+**Creative North Star: "Dibujada para el café, no para navegar"**
 
-La página es la etiqueta de una lata de café antigua hecha para Aroma Café:
-marco de doble filete mostaza, rótulo en arco, un emblema serigrafiado de la
-fachada real y una tira recortable con el estado y el botón de llamar. El
-estilo lo eligió el usuario a partir de una referencia de la galería de
-impeccable (Trattoria da Nonna Lucia); se aplica con los colores y los datos
-reales del café.
+La portada es una carta náutica real de la Badia de Blanes: costa, calles,
+Sa Palomera y el puerto salen de OpenStreetMap, y Aroma Café está marcado en
+el Passeig de Dintre como un faro verde que luce mientras el local está
+abierto. El resto de la página sigue la lógica de una carta: tabla de
+servicio con hoy marcado, la carta del local como lista impresa, vistas del
+local con letra de referencia y un marco ajedrezado de carta en la portada y
+el pie.
 
-La información útil es la portada: horario de la semana con hoy marcado,
-estado abierto o cerrado, teléfono grande y dirección. Cada sección es un
-campo de color plano unido a la siguiente por una costura festoneada.
+Formal y elegante, con colores de café; el verde del toldo es el único acento
+y siempre marca lo accionable o el estado (llamar, hoy, el faro).
 
 **Key Characteristics:**
-- Campos de color plano: verde, rojo, azul y crema, cosidos con festones.
-- Rótulo y titulares en Abril Fatface; etiquetas en Antonio condensada.
-- Fotos reales enmarcadas como cromos y copias de papel, ligeramente giradas.
-- Emblema hecho con la foto de la fachada reducida a cinco tintas planas.
+- Mapa real como portada, no una foto.
+- Paleta de café: espresso, latte, crema, porcelana y caramelo.
+- Romana clásica (Libre Caslon) para rótulos y titulares; Jost para leer.
+- Esquinas rectas, filetes de 1px y 2px, marco ajedrezado.
 
 ## Colors
 
-Paleta de cartel: el verde del toldo manda, el resto son tintas de imprenta.
-
 ### Primary
-- **Verde toldo** (#1C6040): campo de la etiqueta y de La casa.
-- **Mostaza rótulo** (#F0B830): filetes dobles, nombres de panel, botones, tira recortable, día de hoy.
+- **Verde toldo** (#1F4D3A): botones de llamar, fila de hoy, faro de la carta, Passeig de Dintre en el mapa. Hover #163828.
 
 ### Secondary
-- **Rojo tinta** (#BF3922): campos del recorrido del día y del cierre, encabezados de la carta, sellos.
-- **Azul cobalto** (#1D3F7A): franja superior, campo de la carta, pie y texto de la hoja de carta.
+- **Caramelo** (#A8723F): rosa de los vientos, línea de sonda. Solo decorativo, nunca texto pequeño.
 
 ### Neutral
-- **Crema** (#F9F0DA): texto sobre campos de color y hoja de la carta.
-- **Papel** (#FFF8E8): marcos de cromos y copias de fotos.
-- **Tinta** (#0F281E): texto sobre mostaza y papel.
+- **Espresso** (#2A1B14): tinta, filetes, costa, marco.
+- **Espresso suave** (#5B4639): texto secundario.
+- **Latte** (#E2CDAA): tierra del mapa, barra superior, sección de la carta, pie.
+- **Crema** (#F1E6D2) y **crema oscura** (#E9DAC0): bajos del mapa, La casa, Dónde.
+- **Porcelana** (#FBF7F0): agua del mapa y papel de las secciones claras.
 
 ### Named Rules
-**La regla del contraste de imprenta.** Mostaza solo en texto grande sobre verde (4,1:1) y en cualquier tamaño sobre azul o como fondo de texto tinta; el texto pequeño sobre verde y rojo va en crema.
+**La regla de la luz verde.** El verde solo aparece donde hay acción o estado: llamar, hoy, el faro.
 
 ## Typography
 
-**Display Font:** Abril Fatface (con Rockwell Extra Bold, Georgia)
-**Label Font:** Antonio (con Arial Narrow)
+**Display Font:** Libre Caslon Text (con Iowan Old Style, Palatino, Georgia)
 **Body Font:** Jost (con Segoe UI, system-ui)
 
-**Character:** gruesa de lata antigua para el rótulo, condensada de etiqueta para todo lo que es dato, y una sans limpia para leer.
+**Character:** rotulación de carta náutica clásica con una sans geométrica para el texto corrido y las etiquetas.
 
 ### Hierarchy
-- **Display** (400, clamp(2.4rem → 4.4rem), 1.02): titulares de sección.
-- **Headline** (400, clamp(1.9rem → 2.6rem)): nombres de panel (Horario, Reservas).
-- **Label** (700, 1.15rem, 0.1em, mayúsculas): botones, rótulos, platos, días, teléfono (hasta 6.2rem).
-- **Body** (400, 1.0625rem, 1.55): texto corrido y descripciones.
+- **Wordmark** (700, clamp(2.4rem → 4.6rem), mayúsculas, 0.04em): AROMA CAFÉ en el bloque de título.
+- **Display** (400, clamp(2.4rem → 4.4rem), 0.98): titulares de sección, en redonda.
+- **Title** (400, 1.25rem, 1.3): nombres de platos, días de la tabla.
+- **Body** (400, 1.0625rem, 1.6): texto corrido.
+- **Label** (600, 0.8125rem, 0.16em, mayúsculas): encabezados de tabla, datos, notas.
+
+### Named Rules
+**La regla de la cursiva de carta.** La cursiva solo se usa como en una carta náutica: nombres de agua, pies y subtítulos de curso; nunca en titulares.
 
 ## Layout
 
-Primera pantalla en tres paneles (horario, frente, reservas) dentro de un marco de 90rem; a 1100px el frente pasa arriba y a 820px los paneles se apilan y la tira recortable queda fija abajo. Secciones de 84rem con márgenes clamp(1.25rem, 4vw, 3rem). La carta va en tres columnas sobre una hoja crema, que pasan a dos y a una.
+Portada sobre fondo latte con el marco de carta a todo el ancho (hasta 1600px); en escritorio el bloque de título se apoya arriba a la izquierda y el panel de reservas abajo a la izquierda, sobre el mapa. En móvil se apilan título, mapa (con encuadre propio centrado en el café) y panel, y aparece una barra fija de llamada. Secciones de 1180px de ancho máximo; carta en dos columnas, vistas en tres.
 
 ## Elevation & Depth
 
-Plano, como un impreso. La única profundidad la tienen los cromos y las copias de fotos, con sombra de papel (`0 16px 30px -14px` tintada del campo).
+Plano, como un impreso. La profundidad está en el propio mapa (tierra, bajos y agua) y en una leve desalineación de la plancha de tierra que entra en registro al cargar.
 
 ## Shapes
 
-Rectángulos rectos, filetes dobles de 6px, óvalo con doble aro mostaza para el emblema, cinta con colas recortadas, medalla circular con texto en anillo, festones de 22px entre secciones y dientes de 12px en la tira recortable.
+Rectángulos rectos, filetes de 1px, doble línea en tablas, filete discontinuo entre platos, marco ajedrezado de tramos de 44px (32px en móvil).
 
 ## Components
 
-### Botones
-- **Mostaza:** fondo mostaza, texto tinta, Antonio 700 en mayúsculas; al pasar, crema. Escala 0.96 al pulsar.
-- **Azul:** en la tira recortable; al pasar, rojo.
+### Llamar
+Bloque verde con el texto «Llamar para reservar» y el número en romana; versión espresso en la carta del local; versión barra fija en móvil.
 
-### Tira recortable
-Banda mostaza con borde dentado, estado de apertura en vivo, línea de corte discontinua y botón de llamar. Se despega de izquierda a derecha al cargar.
+### Tabla de servicio
+Día, abre y cierra en hora de Blanes; la fila de hoy en verde con la etiqueta «Hoy».
 
-### Sellos
-Etiquetas rojas giradas -4° («Popular», «De la casa») que se estampan con un golpe corto al entrar en pantalla. Solo para datos reales (platos más pedidos según Google, las bravas de la casa).
+### Vistas
+Fotos reales con marco de 1px y letra de referencia (Vista A, B, C…), como las vistas de costa de una carta.
 
 ## Do's and Don'ts
 
 ### Do:
-- **Do** mantener campos de color plano y filetes dobles mostaza.
-- **Do** usar solo fotos reales del café; para ilustraciones, pasar una foto real a tintas planas con `tools/cartel.mjs`.
+- **Do** regenerar la carta con `tools/osm-descargar.mjs` y `tools/carta.mjs`, nunca dibujarla a mano.
+- **Do** citar «© colaboradores de OpenStreetMap» junto al mapa y en el pie.
 
 ### Don't:
-- **Don't** inventar fechas de fundación, precios ni platos para rellenar sellos o medallas.
-- **Don't** poner texto pequeño en mostaza sobre verde ni sobre rojo.
+- **Don't** poner titulares en cursiva ni palabras resaltadas en color.
+- **Don't** inventar sondas, fechas de fundación ni precios.
+- **Don't** usar el verde como decoración.

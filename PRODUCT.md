@@ -48,11 +48,12 @@ llamar para reservar y cómo llegar.
 
 ## Tono y compromisos de marca
 
-- Estilo cartel elegido por el usuario (octubre de 2026) a partir de la
-  referencia de la galería de impeccable «Trattoria da Nonna Lucia»: la web
-  como la etiqueta de una lata de café, con colores vivos y letras de cartel.
-- Se mantienen los datos y la identidad real del café: el verde del toldo
-  manda, el rótulo dice AROMA CAFÉ y el emblema es la fachada real.
+- Formal y elegante, con colores de café: tinta espresso, latte, crema,
+  porcelana y caramelo, y el verde del toldo como único acento.
+- Concepto elegido por el usuario (octubre de 2026) a partir de la referencia
+  de la galería de impeccable «Trattoria da Nonna Lucia» en versión carta
+  náutica: la portada es una carta de la Badia de Blanes con el café marcado.
+- Titulares en romana sin cursiva; la cursiva solo en rótulos de agua y pies.
 - Solo en español.
 
 ## Pendiente del negocio

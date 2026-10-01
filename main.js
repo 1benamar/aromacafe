@@ -36,46 +36,64 @@
     };
   }
 
-  /* ---------- Abierto / cerrado y día de hoy ---------- */
+  /* ---------- Abierto / cerrado: faro de la carta, tabla de hoy y barra de llamada ---------- */
   function initEstado() {
-    var titulo = $("[data-estado-titulo]");
-    var detalle = $("[data-estado-detalle]");
-    var tira = $("[data-estado-tira]");
-    var semana = $("[data-semana]");
+    var textos = $$("[data-estado-texto]");
+    var barra = $("[data-estado-barra]");
+    var faro = $("[data-estado-carta]");
+    var tabla = $("[data-tabla]");
 
     function pintar() {
       var t = ahoraEnBlanes();
-      var estado, linea, corto;
+      var abierto, largo, corto, carta;
       if (CIERRE_TEMPORADA && t.fecha >= CIERRE_TEMPORADA.desde && t.fecha <= CIERRE_TEMPORADA.hasta) {
-        estado = "Cerrado por temporada";
-        linea = "Volvemos pronto";
-        corto = "Cerrado por temporada";
+        abierto = false; largo = "Cerrado por temporada"; corto = largo; carta = "Luz apagada por temporada";
       } else if (t.minutos >= APERTURA && t.minutos < CIERRE) {
-        estado = "Abierto ahora";
-        linea = "Hasta las 23:00 de hoy";
-        corto = "Abierto ahora · hasta las 23:00";
-      } else if (t.minutos < APERTURA) {
-        estado = "Cerrado ahora";
-        linea = "Abre hoy a las 8:30";
-        corto = "Cerrado · abre a las 8:30";
+        abierto = true; largo = "Abierto ahora · hasta las 23:00"; corto = largo; carta = "Luz verde encendida hasta las 23:00";
       } else {
-        estado = "Cerrado ahora";
-        linea = "Abre mañana a las 8:30";
+        abierto = false;
+        largo = t.minutos < APERTURA ? "Cerrado ahora · abre a las 8:30" : "Cerrado ahora · abre mañana a las 8:30";
         corto = "Cerrado · abre a las 8:30";
+        carta = "Luz verde de 8:30 a 23:00";
       }
-      if (titulo) titulo.textContent = estado;
-      if (detalle) detalle.textContent = linea;
-      if (tira) tira.textContent = corto;
-      if (semana) {
-        $$("li", semana).forEach(function (li) {
-          var hoy = li.getAttribute("data-dia") === t.dia;
-          li.classList.toggle("is-hoy", hoy);
-          if (hoy) li.setAttribute("aria-current", "date"); else li.removeAttribute("aria-current");
+      document.body.setAttribute("data-estado", abierto ? "abierto" : "cerrado");
+      textos.forEach(function (n) {
+        n.textContent = largo;
+        var caja = n.closest("[data-estado]");
+        if (caja) caja.classList.toggle("is-cerrado", !abierto);
+      });
+      if (barra) barra.textContent = corto;
+      if (faro) faro.textContent = carta;
+      if (tabla) {
+        $$("tbody tr", tabla).forEach(function (tr) {
+          var hoy = tr.getAttribute("data-dia") === t.dia;
+          tr.classList.toggle("is-hoy", hoy);
+          if (hoy) tr.setAttribute("aria-current", "date"); else tr.removeAttribute("aria-current");
         });
       }
     }
     pintar();
     setInterval(pintar, 60 * 1000);
+  }
+
+  /* ---------- Encuadre de la carta: en móvil, centrado en el café y la playa ---------- */
+  function initEncuadre() {
+    var svg = $(".carta-nautica");
+    if (!svg) return;
+    var mq = window.matchMedia("(max-width: 719px)");
+    function aplicar() { svg.setAttribute("viewBox", mq.matches ? "590 170 900 900" : "0 0 1800 1000"); }
+    aplicar();
+    if (mq.addEventListener) mq.addEventListener("change", aplicar);
+  }
+
+  /* ---------- Barra de llamada en móvil: se recoge mientras se ven las notas de la carta ---------- */
+  function initBarra() {
+    var barra = $("[data-barra-llamar]");
+    var notas = $("[data-notas]");
+    if (!barra || !notas || !("IntersectionObserver" in window)) return;
+    new IntersectionObserver(function (entradas) {
+      entradas.forEach(function (e) { barra.classList.toggle("is-recogida", e.isIntersecting); });
+    }).observe(notas);
   }
 
   /* ---------- Apariciones al bajar ---------- */
@@ -90,7 +108,6 @@
         if (!el.style.transitionDelay) el.style.transitionDelay = Math.min(i * 90, 360) + "ms";
         el.classList.add("is-visible");
         io.unobserve(el);
-        // el retardo solo vale para la entrada; después, el giro al pasar el ratón responde al instante
         setTimeout(function () { el.style.transitionDelay = ""; }, 1400);
       });
     }, { threshold: 0.01, rootMargin: "0px 0px -6% 0px" });
@@ -100,24 +117,6 @@
       els.forEach(function (el) {
         if (!el.classList.contains("is-visible") && el.getBoundingClientRect().top < window.innerHeight) el.classList.add("is-visible");
       });
-    }, 6000);
-  }
-
-  /* ---------- Sellos de la carta: cada uno se estampa al entrar en pantalla ---------- */
-  function initSellos() {
-    var sellos = $$("[data-sello]");
-    if (!sellos.length) return;
-    if (!("IntersectionObserver" in window)) { sellos.forEach(function (s) { s.classList.add("is-estampado"); }); return; }
-    var io = new IntersectionObserver(function (entradas) {
-      entradas.filter(function (e) { return e.isIntersecting; }).forEach(function (e, i) {
-        var s = e.target;
-        setTimeout(function () { s.classList.add("is-estampado"); }, reducido ? 0 : 250 + i * 160);
-        io.unobserve(s);
-      });
-    }, { threshold: 0.6, rootMargin: "0px 0px -12% 0px" });
-    sellos.forEach(function (s) { io.observe(s); });
-    setTimeout(function () {
-      sellos.forEach(function (s) { if (s.getBoundingClientRect().top < window.innerHeight) s.classList.add("is-estampado"); });
     }, 6000);
   }
 
@@ -196,9 +195,10 @@
     if (n) n.textContent = String(new Date().getFullYear());
   }
 
+  safe(initEncuadre, "encuadre");
   safe(initEstado, "estado");
   safe(initApariciones, "apariciones");
-  safe(initSellos, "sellos");
+  safe(initBarra, "barra");
   safe(initVisor, "visor");
   safe(initAnio, "anio");
 })();

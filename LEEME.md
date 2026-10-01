@@ -15,6 +15,15 @@ encuadres y tamaños está en `tools/imagenes.mjs`; para regenerar las WebP:
 
     cd tools && npm install && node imagenes.mjs
 
+## La carta de la portada
+
+El mapa se dibuja con datos reales de OpenStreetMap (© colaboradores de
+OpenStreetMap). Para volver a descargarlos y regenerar la carta dentro de
+index.html:
+
+    node tools/osm-descargar.mjs
+    node tools/carta.mjs
+
 ## Cuando haya dominio
 
     node tools/poner-dominio.mjs https://eldominio.com
