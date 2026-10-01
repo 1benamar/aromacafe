@@ -1,0 +1,16 @@
+# Originales de las fotos (la web usa las versiones optimizadas de assets/img)
+assets/photos/
+
+# Herramientas locales
+tools/node_modules/
+.web/
+
+# Configuración local
+.claude/
+.impeccable/review/
+.impeccable/build/
+.impeccable/mocks/
+
+# Sistema
+.DS_Store
+Thumbs.db

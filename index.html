@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Aroma Café Blanes · Cafetería y terraza en el Passeig de Dintre</title>
+  <meta name="description" content="Cafetería y bar con terraza en el centro de Blanes, a una calle de la playa. Desayunos, bocadillos, platos, tapas y cócteles. Todos los días de 8:30 a 23:00.">
+  <meta name="theme-color" content="#1F3B33">
+  <meta name="color-scheme" content="light">
+  <!--DOMINIO-->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="Aroma Café Blanes">
+  <meta property="og:title" content="Aroma Café Blanes · Cafetería y terraza en el Passeig de Dintre">
+  <meta property="og:description" content="Desayunos, bocadillos, tapas y cócteles a una calle de la playa. Todos los días de 8:30 a 23:00.">
+  <meta property="og:image" content="assets/img/compartir.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Fachada de Aroma Café al anochecer">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/cormorant-garamond-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/jost-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" as="image" href="assets/img/fachada-movil-860.webp" media="(max-width: 700px)">
+  <link rel="preload" as="image" imagesrcset="assets/img/fachada-1000.webp 1000w, assets/img/fachada-1600.webp 1600w, assets/img/fachada-2400.webp 2400w" imagesizes="100vw" media="(min-width: 701px)">
+  <link rel="stylesheet" href="styles.css?v=20261001">
+  <script>
+    /* Las animaciones de aparición solo se activan si main.js llega a ejecutarse;
+       si no lo hace en 3 s, el contenido se muestra igualmente. */
+    document.documentElement.classList.add("js");
+    setTimeout(function () { if (!window.__aroma) document.documentElement.classList.remove("js"); }, 3000);
+  </script>
+  <script defer src="main.js?v=20261001"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CafeOrCoffeeShop",
+    "name": "Aroma Café Blanes",
+    "image": "assets/img/compartir.jpg",
+    "telephone": "+34 972 74 66 43",
+    "priceRange": "10-20 €",
+    "servesCuisine": ["Café", "Desayunos", "Bocadillos", "Tapas"],
+    "acceptsReservations": "True",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Passeig de Dintre, 4",
+      "addressLocality": "Blanes",
+      "addressRegion": "Girona",
+      "postalCode": "17300",
+      "addressCountry": "ES"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": 41.6731067, "longitude": 2.7910103 },
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "08:30",
+      "closes": "23:00"
+    }],
+    "hasMap": "https://maps.google.com/?cid=16147034185483989814",
+    "sameAs": ["https://www.instagram.com/aroma_cafe_blanes/"]
+  }
+  </script>
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+  <symbol id="i-clock" viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 256 256"><path d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.12L97.54,33.64a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,32,80c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.88-48.92A16,16,0,0,0,222.37,158.46ZM176,208A128.14,128.14,0,0,1,48,80,40.2,40.2,0,0,1,82.87,40a.61.61,0,0,0,0,.12l21,47L83.2,111.86a6.13,6.13,0,0,0-.57.77,16,16,0,0,0-1,15.7c9.06,18.53,27.73,37.06,46.46,46.11a16,16,0,0,0,15.75-1.14,8.44,8.44,0,0,0,.74-.56L168.89,152l47,21.05h0s.08,0,.11,0A40.21,40.21,0,0,1,176,208Z"/></symbol>
+  <symbol id="i-map-pin" viewBox="0 0 256 256"><path d="M128,64a40,40,0,1,0,40,40A40,40,0,0,0,128,64Zm0,64a24,24,0,1,1,24-24A24,24,0,0,1,128,128Zm0-112a88.1,88.1,0,0,0-88,88c0,31.4,14.51,64.68,42,96.25a254.19,254.19,0,0,0,41.45,38.3,8,8,0,0,0,9.18,0A254.19,254.19,0,0,0,174,200.25c27.45-31.57,42-64.85,42-96.25A88.1,88.1,0,0,0,128,16Zm0,206c-16.53-13-72-60.75-72-118a72,72,0,0,1,144,0C200,161.23,144.53,209,128,222Z"/></symbol>
+  <symbol id="i-paw-print" viewBox="0 0 256 256"><path d="M212,80a28,28,0,1,0,28,28A28,28,0,0,0,212,80Zm0,40a12,12,0,1,1,12-12A12,12,0,0,1,212,120ZM72,108a28,28,0,1,0-28,28A28,28,0,0,0,72,108ZM44,120a12,12,0,1,1,12-12A12,12,0,0,1,44,120ZM92,88A28,28,0,1,0,64,60,28,28,0,0,0,92,88Zm0-40A12,12,0,1,1,80,60,12,12,0,0,1,92,48Zm72,40a28,28,0,1,0-28-28A28,28,0,0,0,164,88Zm0-40a12,12,0,1,1-12,12A12,12,0,0,1,164,48Zm23.12,100.86a35.3,35.3,0,0,1-16.87-21.14,44,44,0,0,0-84.5,0A35.25,35.25,0,0,1,69,148.82,40,40,0,0,0,88,224a39.48,39.48,0,0,0,15.52-3.13,64.09,64.09,0,0,1,48.87,0,40,40,0,0,0,34.73-72ZM168,208a24,24,0,0,1-9.45-1.93,80.14,80.14,0,0,0-61.19,0,24,24,0,0,1-20.71-43.26,51.22,51.22,0,0,0,24.46-30.67,28,28,0,0,1,53.78,0,51.27,51.27,0,0,0,24.53,30.71A24,24,0,0,1,168,208Z"/></symbol>
+  <symbol id="i-umbrella" viewBox="0 0 256 256"><path d="M240,126.63A112.44,112.44,0,0,0,51.75,53.75a111.56,111.56,0,0,0-35.7,72.88A16,16,0,0,0,32,144h88v56a32,32,0,0,0,64,0,8,8,0,0,0-16,0,16,16,0,0,1-32,0V144h88a16,16,0,0,0,16-17.37ZM32,128l0,0a96.15,96.15,0,0,1,76.2-85.89C96.48,58,81.85,86.11,80.17,128Zm64.15,0c1.39-30.77,10.53-52.81,18.3-66.24A106.44,106.44,0,0,1,128,43.16a106.31,106.31,0,0,1,13.52,18.6C154.8,84.7,159,109.28,159.82,128Zm79.65,0c-1.68-41.89-16.31-70-28-85.94A96.07,96.07,0,0,1,224,128Z"/></symbol>
+  <symbol id="i-calendar-check" viewBox="0 0 256 256"><path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Zm-38.34-85.66a8,8,0,0,1,0,11.32l-48,48a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L116,164.69l42.34-42.35A8,8,0,0,1,169.66,122.34Z"/></symbol>
+  <symbol id="i-wheelchair" viewBox="0 0 256 256"><path d="M255.59,189.47a8,8,0,0,0-10.12-5.06l-17.42,5.81-28.9-57.8A8,8,0,0,0,192,128H112V104h56a8,8,0,0,0,0-16H112V79a32,32,0,1,0-16,0V89.81A72,72,0,0,0,112,232c33.52,0,63.69-22.71,71.75-54a8,8,0,1,0-15.5-4C162.09,198,137.91,216,112,216A56,56,0,0,1,96,106.34V136a8,8,0,0,0,8,8h83.05l29.79,59.58a8,8,0,0,0,9.69,4l24-8A8,8,0,0,0,255.59,189.47ZM88,48a16,16,0,1,1,16,16A16,16,0,0,1,88,48Z"/></symbol>
+  <symbol id="i-arrow-right" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></symbol>
+  <symbol id="i-arrow-up-right" viewBox="0 0 256 256"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></symbol>
+  <symbol id="i-star" viewBox="0 0 256 256"><path d="M234.29,114.85l-45,38.83L203,211.75a16.4,16.4,0,0,1-24.5,17.82L128,198.49,77.47,229.57A16.4,16.4,0,0,1,53,211.75l13.76-58.07-45-38.83A16.46,16.46,0,0,1,31.08,86l59-4.76,22.76-55.08a16.36,16.36,0,0,1,30.27,0l22.75,55.08,59,4.76a16.46,16.46,0,0,1,9.37,28.86Z"/></symbol>
+  <symbol id="i-x" viewBox="0 0 256 256"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"/></symbol>
+  <symbol id="i-caret-left" viewBox="0 0 256 256"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"/></symbol>
+  <symbol id="i-caret-right" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"/></symbol>
+  <symbol id="i-instagram-logo" viewBox="0 0 256 256"><path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"/></symbol>
+  <symbol id="i-list" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"/></symbol>
+  <symbol id="i-coffee" viewBox="0 0 256 256"><path d="M80,56V24a8,8,0,0,1,16,0V56a8,8,0,0,1-16,0Zm40,8a8,8,0,0,0,8-8V24a8,8,0,0,0-16,0V56A8,8,0,0,0,120,64Zm32,0a8,8,0,0,0,8-8V24a8,8,0,0,0-16,0V56A8,8,0,0,0,152,64Zm96,56v8a40,40,0,0,1-37.51,39.91,96.59,96.59,0,0,1-27,40.09H208a8,8,0,0,1,0,16H32a8,8,0,0,1,0-16H56.54A96.3,96.3,0,0,1,24,136V88a8,8,0,0,1,8-8H208A40,40,0,0,1,248,120ZM200,96H40v40a80.27,80.27,0,0,0,45.12,72h69.76A80.27,80.27,0,0,0,200,136Zm32,24a24,24,0,0,0-16-22.62V136a95.78,95.78,0,0,1-1.2,15A24,24,0,0,0,232,128Z"/></symbol>
+  <symbol id="i-credit-card" viewBox="0 0 256 256"><path d="M224,48H32A16,16,0,0,0,16,64V192a16,16,0,0,0,16,16H224a16,16,0,0,0,16-16V64A16,16,0,0,0,224,48Zm0,16V88H32V64Zm0,128H32V104H224v88Zm-16-24a8,8,0,0,1-8,8H168a8,8,0,0,1,0-16h32A8,8,0,0,1,208,168Zm-64,0a8,8,0,0,1-8,8H120a8,8,0,0,1,0-16h16A8,8,0,0,1,144,168Z"/></symbol>
+  <symbol id="i-arrows-out-simple" viewBox="0 0 256 256"><path d="M216,48V96a8,8,0,0,1-16,0V67.31l-50.34,50.35a8,8,0,0,1-11.32-11.32L188.69,56H160a8,8,0,0,1,0-16h48A8,8,0,0,1,216,48ZM106.34,138.34,56,188.69V160a8,8,0,0,0-16,0v48a8,8,0,0,0,8,8H96a8,8,0,0,0,0-16H67.31l50.35-50.34a8,8,0,0,0-11.32-11.32Z"/></symbol>
+</svg>
+<a class="saltar" href="#casa">Saltar al contenido</a>
+
+<header class="cab" data-cab>
+  <div class="cab__fila contenedor">
+    <a class="marca" href="#inicio" aria-label="Aroma Café, ir al inicio">
+      <span class="marca__nombre">Aroma Café</span>
+      <span class="marca__lugar">Blanes</span>
+    </a>
+    <nav class="cab__nav" aria-label="Secciones">
+      <a href="#casa">La casa</a>
+      <a href="#carta">La carta</a>
+      <a href="#local">El local</a>
+      <a href="#opiniones">Opiniones</a>
+      <a href="#visita">Dónde estamos</a>
+    </nav>
+    <a class="boton boton--cab" href="tel:+34972746643">
+      <svg class="icono" aria-hidden="true"><use href="#i-phone"/></svg>
+      <span>Reservar mesa</span>
+    </a>
+    <button class="cab__abrir" type="button" aria-expanded="false" aria-controls="menu-movil" data-menu-abrir>
+      <svg class="icono" aria-hidden="true"><use href="#i-list"/></svg>
+      <span>Menú</span>
+    </button>
+  </div>
+</header>
+
+<div class="menu-movil" id="menu-movil" data-menu hidden>
+  <div class="menu-movil__cab contenedor">
+    <span class="marca marca--estatica"><span class="marca__nombre">Aroma Café</span><span class="marca__lugar">Blanes</span></span>
+    <button class="menu-movil__cerrar" type="button" aria-label="Cerrar el menú" data-menu-cerrar>
+      <svg class="icono" aria-hidden="true"><use href="#i-x"/></svg>
+    </button>
+  </div>
+  <nav class="menu-movil__nav contenedor" aria-label="Secciones">
+    <a href="#casa">La casa</a>
+    <a href="#dia">Del café a la copa</a>
+    <a href="#carta">La carta</a>
+    <a href="#local">El local</a>
+    <a href="#opiniones">Opiniones</a>
+    <a href="#visita">Dónde estamos</a>
+  </nav>
+  <div class="menu-movil__pie contenedor">
+    <p class="estado" data-estado><span class="estado__punto" aria-hidden="true"></span><span data-estado-texto>Todos los días, de 8:30 a 23:00</span></p>
+    <a class="boton boton--claro boton--ancho" href="tel:+34972746643">
+      <svg class="icono" aria-hidden="true"><use href="#i-phone"/></svg>
+      <span>Reservar mesa · 972 74 66 43</span>
+    </a>
+  </div>
+</div>
+
+<main>
+  <!-- PORTADA -->
+  <section class="portada" id="inicio" data-portada>
+    <div class="portada__foto">
+      <picture>
+        <source media="(max-width: 700px)" srcset="assets/img/fachada-movil-600.webp 600w, assets/img/fachada-movil-860.webp 860w" sizes="100vw">
+        <img src="assets/img/fachada-1600.webp"
+             srcset="assets/img/fachada-1000.webp 1000w, assets/img/fachada-1600.webp 1600w, assets/img/fachada-2400.webp 2400w"
+             sizes="100vw" width="2400" height="1350" fetchpriority="high" decoding="async"
+             alt="Fachada de Aroma Café al anochecer: rótulo dorado sobre verde, el local iluminado y la terraza con sillas de bistró">
+      </picture>
+    </div>
+    <div class="portada__velo" aria-hidden="true"></div>
+
+    <div class="portada__texto contenedor">
+      <h1 class="portada__titulo">Café, cocina y terraza en el centro de Blanes</h1>
+      <p class="portada__frase">Desayunos, bocadillos, tapas y cócteles todos los días, a una calle de la playa.</p>
+      <div class="portada__acciones">
+        <a class="boton boton--claro" href="#carta">Ver la carta</a>
+        <a class="boton boton--linea" href="tel:+34972746643">
+          <svg class="icono" aria-hidden="true"><use href="#i-phone"/></svg>
+          <span>Reservar mesa</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="franja">
+      <div class="franja__fila contenedor">
+        <p class="estado" data-estado><span class="estado__punto" aria-hidden="true"></span><span data-estado-texto>Abierto todos los días</span></p>
+        <p class="franja__dato"><svg class="icono" aria-hidden="true"><use href="#i-clock"/></svg>De 8:30 a 23:00</p>
+        <p class="franja__dato franja__dato--dir"><svg class="icono" aria-hidden="true"><use href="#i-map-pin"/></svg>Passeig de Dintre, 4</p>
+        <a class="franja__dato franja__nota" href="#opiniones"><svg class="icono icono--oro" aria-hidden="true"><use href="#i-star"/></svg>4,6 en Google · 547 reseñas</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- LA CASA -->
+  <section class="casa seccion" id="casa">
+    <div class="casa__rejilla contenedor">
+      <div class="casa__texto">
+        <h2 class="titulo" data-revela>Un café de siempre, a un paso del mar</h2>
+        <p data-revela>Aroma Café abre cada mañana en pleno Passeig de Dintre, en el centro de Blanes. Café bien hecho y desayunos a primera hora, bocadillos y platos sencillos al mediodía, y tapas, cervezas y cócteles en la terraza hasta la noche.</p>
+        <p data-revela>Mesas de mármol, sillas de bistró, una barra dorada y un trato atento que los clientes destacan en sus reseñas.</p>
+        <ul class="datos" data-revela>
+          <li><svg class="icono" aria-hidden="true"><use href="#i-clock"/></svg><span><strong>Todos los días</strong>De 8:30 a 23:00</span></li>
+          <li><svg class="icono" aria-hidden="true"><use href="#i-umbrella"/></svg><span><strong>Terraza</strong>En el Passeig de Dintre</span></li>
+          <li><svg class="icono" aria-hidden="true"><use href="#i-paw-print"/></svg><span><strong>Mascotas</strong>Son bienvenidas</span></li>
+          <li><svg class="icono" aria-hidden="true"><use href="#i-wheelchair"/></svg><span><strong>Accesible</strong>Acceso y aseo adaptados</span></li>
+        </ul>
+      </div>
+      <div class="casa__fotos">
+        <figure class="casa__foto casa__foto--grande" data-desvela>
+          <img src="assets/img/barra-900.webp" srcset="assets/img/barra-900.webp 900w, assets/img/barra-1560.webp 1560w"
+               sizes="(min-width: 1000px) 46vw, 100vw" width="1560" height="1081" loading="lazy" decoding="async"
+               alt="La barra de Aroma Café: frente dorado ondulado, taburetes de terciopelo verde y una mesa de mármol con sillas de bistró">
+        </figure>
+        <figure class="casa__foto casa__foto--pequena" data-desvela>
+          <img src="assets/img/taza-460.webp" srcset="assets/img/taza-460.webp 460w, assets/img/taza-700.webp 700w"
+               sizes="(min-width: 1000px) 18vw, 40vw" width="700" height="875" loading="lazy" decoding="async"
+               alt="Taza de café sobre una mesa de mármol">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEL CAFÉ A LA COPA -->
+  <section class="dia seccion" id="dia" data-dia>
+    <header class="cabecera contenedor">
+      <svg class="adorno" viewBox="0 0 120 10" aria-hidden="true"><path d="M0 5h50M70 5h50" stroke="currentColor"/><path d="M60 .8 64.2 5 60 9.2 55.8 5z" fill="currentColor"/></svg>
+      <h2 class="titulo" data-revela>Del primer café a la última copa</h2>
+      <p data-revela>De 8:30 a 23:00, la cocina y la barra acompañan todo el día.</p>
+    </header>
+
+    <div class="dia__rejilla contenedor">
+      <div class="dia__escenario" aria-hidden="true">
+        <img class="dia__img is-activa" src="assets/img/manana-720.webp" srcset="assets/img/manana-720.webp 720w, assets/img/manana-1200.webp 1200w" sizes="(min-width: 1000px) 44vw, 1px" width="1200" height="1500" loading="lazy" decoding="async" alt="">
+        <img class="dia__img" src="assets/img/mediodia-720.webp" srcset="assets/img/mediodia-720.webp 720w, assets/img/mediodia-1200.webp 1200w" sizes="(min-width: 1000px) 44vw, 1px" width="1200" height="1500" loading="lazy" decoding="async" alt="">
+        <img class="dia__img" src="assets/img/tarde-720.webp" srcset="assets/img/tarde-720.webp 720w, assets/img/tarde-1200.webp 1200w" sizes="(min-width: 1000px) 44vw, 1px" width="1200" height="1500" loading="lazy" decoding="async" alt="">
+      </div>
+
+      <ol class="dia__pasos">
+        <li class="paso is-activo" data-paso="0">
+          <figure class="paso__foto">
+            <img src="assets/img/manana-720.webp" width="720" height="900" loading="lazy" decoding="async" alt="Croissant, café y café con nata en la terraza, con un perro tumbado junto a la mesa">
+          </figure>
+                    <h3 class="paso__titulo">Por la mañana</h3>
+          <p class="paso__texto">Desde las 8:30, café con leche, cortado o capuchino, tostadas y bollería para empezar el día sin prisa.</p>
+          <ul class="paso__lista">
+            <li>Tostada con tomate y jamón</li>
+            <li>Tostada de salmón</li>
+            <li>Croissant y bollería</li>
+            <li>Café, té y zumos</li>
+          </ul>
+        </li>
+        <li class="paso" data-paso="1">
+          <figure class="paso__foto">
+            <img src="assets/img/mediodia-720.webp" width="720" height="900" loading="lazy" decoding="async" alt="Ensalada griega con aceitunas, queso feta y tomate, junto a una jarra de limonada">
+          </figure>
+                    <h3 class="paso__titulo">Al mediodía</h3>
+          <p class="paso__texto">Bocadillos fríos y calientes, hamburguesas, platos combinados y ensaladas para comer bien sin complicaciones.</p>
+          <ul class="paso__lista">
+            <li>Bocadillos en pan grande o pequeño</li>
+            <li>Hamburguesas con patatas</li>
+            <li>Escalopa de pollo</li>
+            <li>Ensalada griega</li>
+          </ul>
+        </li>
+        <li class="paso" data-paso="2">
+          <figure class="paso__foto">
+            <img src="assets/img/tarde-720.webp" width="720" height="900" loading="lazy" decoding="async" alt="Sangría, cerveza, pan con tomate y jamón sobre una mesa de mármol de la terraza">
+          </figure>
+                    <h3 class="paso__titulo">Tarde y noche</h3>
+          <p class="paso__texto">Tapas para compartir, cerveza fría, sangría y cócteles en la terraza, hasta las 23:00.</p>
+          <ul class="paso__lista">
+            <li>Patatas bravas de la casa</li>
+            <li>Pulpo a la gallega</li>
+            <li>Calamares a la romana</li>
+            <li>Sangría y mojitos</li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- LA CARTA -->
+  <section class="carta seccion" id="carta">
+    <div class="contenedor">
+      <header class="cabecera cabecera--carta">
+        <svg class="adorno" viewBox="0 0 120 10" aria-hidden="true"><path d="M0 5h50M70 5h50" stroke="currentColor"/><path d="M60 .8 64.2 5 60 9.2 55.8 5z" fill="currentColor"/></svg>
+        <h2 class="titulo" data-revela>La carta</h2>
+        <p data-revela>Una selección de lo que se sirve cada día. La carta completa y los precios, en el local.</p>
+      </header>
+
+      <div class="carta__pestanas" data-pestanas>
+        <div class="pestanas" role="tablist" aria-label="Secciones de la carta">
+          <button class="pestana" type="button" role="tab" id="p-desayunos" aria-controls="c-desayunos" aria-selected="true">Desayunos</button>
+          <button class="pestana" type="button" role="tab" id="p-bocadillos" aria-controls="c-bocadillos" aria-selected="false" tabindex="-1">Bocadillos</button>
+          <button class="pestana" type="button" role="tab" id="p-platos" aria-controls="c-platos" aria-selected="false" tabindex="-1">Platos</button>
+          <button class="pestana" type="button" role="tab" id="p-tapas" aria-controls="c-tapas" aria-selected="false" tabindex="-1">Tapas</button>
+          <button class="pestana" type="button" role="tab" id="p-bebidas" aria-controls="c-bebidas" aria-selected="false" tabindex="-1">Bebidas y postres</button>
+          <span class="pestanas__indicador" aria-hidden="true" data-indicador></span>
+        </div>
+
+        <div class="carta__panel is-activo" role="tabpanel" id="c-desayunos" aria-labelledby="p-desayunos" tabindex="0">
+          <ul class="platos">
+            <li><h3>Café</h3><p>Expreso, cortado, café con leche o capuchino.</p></li>
+            <li><h3>Té</h3></li>
+            <li><h3>Tostada con tomate y jamón</h3></li>
+            <li><h3>Tostada de salmón</h3></li>
+            <li><h3>Tostada de queso curado</h3></li>
+            <li><h3>Tostada de butifarra con cebolla</h3></li>
+            <li><h3>Croissant y bollería</h3><p>Y pastelería, como el pastel de zanahoria.</p></li>
+            <li><h3>Zumos</h3></li>
+          </ul>
+        </div>
+
+        <div class="carta__panel" role="tabpanel" id="c-bocadillos" aria-labelledby="p-bocadillos" tabindex="0" hidden>
+          <ul class="platos">
+            <li><h3>Jamón serrano o ibérico</h3><p>Fríos, en pan grande o pequeño.</p></li>
+            <li><h3>Butifarra blanca, fuet o queso curado</h3></li>
+            <li><h3>Vegetal</h3><p>Con atún, con jamón o con queso.</p></li>
+            <li><h3>Salmón</h3><p>Con lechuga y huevo duro.</p></li>
+            <li><h3>Bikini</h3><p>Jamón y queso.</p></li>
+            <li><h3>Tortilla francesa o rellena</h3><p>Caliente, en pan grande o pequeño.</p></li>
+            <li><h3>Lomo o bacon con queso</h3></li>
+            <li><h3>Serranito</h3><p>Lomo, jamón y pimiento verde.</p></li>
+            <li><h3>Calamares</h3></li>
+            <li><h3>Vegetal con pollo</h3></li>
+          </ul>
+        </div>
+
+        <div class="carta__panel" role="tabpanel" id="c-platos" aria-labelledby="p-platos" tabindex="0" hidden>
+          <ul class="platos">
+            <li><h3>Hamburguesa clásica</h3><p>Ternera, ensalada, tomate y queso cheddar, con patatas fritas.</p></li>
+            <li><h3>Hamburguesa mexicana</h3><p>Ternera, guacamole, cebolla caramelizada y cheddar.</p></li>
+            <li><h3>Hamburguesa de pollo</h3><p>Pollo, ensalada, tomate y queso cheddar.</p></li>
+            <li><h3>Huevos fritos con jamón ibérico</h3><p>Con virutas de jamón.</p></li>
+            <li><h3>Escalopa de pollo</h3><p>Con patatas y ensalada.</p></li>
+            <li><h3>Butifarra con judías</h3><p>Con pan con tomate y alioli.</p></li>
+            <li><h3>Lomo con patatas y huevo</h3></li>
+            <li><h3>Ensalada griega</h3><p>Tomate, pepino, cebolla, aceitunas y queso feta.</p></li>
+          </ul>
+        </div>
+
+        <div class="carta__panel" role="tabpanel" id="c-tapas" aria-labelledby="p-tapas" tabindex="0" hidden>
+          <ul class="platos">
+            <li><h3>Patatas bravas</h3><p>Al estilo de la casa.</p></li>
+            <li><h3>Calamares a la romana</h3><p>Rebozados, con limón.</p></li>
+            <li><h3>Pulpo a la gallega</h3><p>Con aceite de oliva y pimentón.</p></li>
+            <li><h3>Chipirones</h3></li>
+            <li><h3>Boquerones</h3><p>Entre los platos más pedidos.</p></li>
+            <li><h3>Pan con tomate y jamón</h3></li>
+          </ul>
+        </div>
+
+        <div class="carta__panel" role="tabpanel" id="c-bebidas" aria-labelledby="p-bebidas" tabindex="0" hidden>
+          <ul class="platos">
+            <li><h3>Cervezas</h3><p>Estrella Galicia, 1906 y La Chouffe, entre otras.</p></li>
+            <li><h3>Sangría</h3></li>
+            <li><h3>Mojito y mojito de fresa</h3><p>Y otros cócteles.</p></li>
+            <li><h3>Vinos y licores</h3><p>Copas y combinados.</p></li>
+            <li><h3>Refrescos y zumos</h3></li>
+            <li><h3>Postres</h3><p>Pastel de zanahoria y carta de postres.</p></li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="carta__nota" data-revela>Hay sugerencias fuera de carta en la pizarra de la entrada. Si tiene alguna alergia o intolerancia, consulte al personal.</p>
+    </div>
+  </section>
+
+  <!-- EL LOCAL -->
+  <section class="local seccion" id="local">
+    <header class="cabecera contenedor">
+      <h2 class="titulo" data-revela>El local y la terraza</h2>
+      <p data-revela>Fotografías del propio café y de sus clientes.</p>
+    </header>
+    <div class="mosaico contenedor" data-mosaico>
+      <button class="mosaico__item mosaico__item--a" type="button" data-visor="0" data-desvela>
+        <img src="assets/img/interior-800.webp" srcset="assets/img/interior-800.webp 800w, assets/img/interior-1400.webp 1400w" sizes="(min-width: 1000px) 56vw, 100vw" width="1400" height="1050" loading="lazy" decoding="async" alt="Dos cañas en una mesa del interior, con el cartel de Aroma Café y la barra al fondo">
+        <span class="mosaico__pie">El interior</span>
+      </button>
+      <button class="mosaico__item mosaico__item--b" type="button" data-visor="1" data-desvela>
+        <img src="assets/img/terraza.webp" width="640" height="640" loading="lazy" decoding="async" alt="La terraza bajo el toldo verde de Aroma Café, llena de clientes">
+        <span class="mosaico__pie">La terraza</span>
+      </button>
+      <button class="mosaico__item mosaico__item--c" type="button" data-visor="2" data-desvela>
+        <img src="assets/img/tapas-600.webp" srcset="assets/img/tapas-600.webp 600w, assets/img/tapas-1000.webp 1000w" sizes="(min-width: 1000px) 30vw, 50vw" width="1000" height="1250" loading="lazy" decoding="async" alt="Pulpo a la gallega y calamares a la romana">
+        <span class="mosaico__pie">Tapas</span>
+      </button>
+      <button class="mosaico__item mosaico__item--d" type="button" data-visor="3" data-desvela>
+        <img src="assets/img/tostada.webp" width="640" height="480" loading="lazy" decoding="async" alt="Pan con tomate y jamón en un plato verde, con un batido de chocolate">
+        <span class="mosaico__pie">Pan con tomate</span>
+      </button>
+      <button class="mosaico__item mosaico__item--e" type="button" data-visor="4" data-desvela>
+        <img src="assets/img/mojito.webp" width="512" height="640" loading="lazy" decoding="async" alt="Mojito de fresa y una cerveza La Chouffe">
+        <span class="mosaico__pie">Mojito de fresa</span>
+      </button>
+      <button class="mosaico__item mosaico__item--f" type="button" data-visor="5" data-desvela>
+        <img src="assets/img/desayuno-600.webp" srcset="assets/img/desayuno-600.webp 600w, assets/img/desayuno-1000.webp 1000w" sizes="(min-width: 1000px) 30vw, 50vw" width="1000" height="951" loading="lazy" decoding="async" alt="Desayuno con huevos fritos, bacon, judías, tomate y tostadas">
+        <span class="mosaico__pie">Desayuno</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- OPINIONES -->
+  <section class="opiniones seccion" id="opiniones">
+    <div class="opiniones__rejilla contenedor">
+      <div class="nota" data-revela>
+        <p class="nota__cifra">4,6</p>
+        <div class="nota__estrellas" role="img" aria-label="4,6 de 5 estrellas">
+          <span class="nota__base"><svg class="icono" aria-hidden="true"><use href="#i-star"/></svg><svg class="icono" aria-hidden="true"><use href="#i-star"/></svg><svg class="icono" aria-hidden="true"><use href="#i-star"/></svg><svg class="icono" aria-hidden="true"><use href="#i-star"/></svg><svg class="icono" aria-hidden="true"><use href="#i-star"/></svg></span>
+          <span class="nota__relleno" style="--nota: 92%"><svg class="icono" aria-hidden="true"><use href="#i-star"/></svg><svg class="icono" aria-hidden="true"><use href="#i-star"/></svg><svg class="icono" aria-hidden="true"><use href="#i-star"/></svg><svg class="icono" aria-hidden="true"><use href="#i-star"/></svg><svg class="icono" aria-hidden="true"><use href="#i-star"/></svg></span>
+        </div>
+        <p class="nota__texto">547 reseñas en Google</p>
+        <a class="enlace" href="https://maps.google.com/?cid=16147034185483989814" target="_blank" rel="noopener">Leer las reseñas<svg class="icono" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+      </div>
+
+      <div class="citas">
+        <h2 class="titulo titulo--citas" data-revela>Lo que dicen quienes nos visitan</h2>
+        <figure class="cita" data-revela>
+          <blockquote><p>«¡Excelente servicio! ¡Excelente café! La pastelería estaba muy buena […] Todo se veía fresco, el ambiente y el local estaban súper limpios y ordenados.»</p></blockquote>
+          <figcaption>Diannis C. · reseña en Google</figcaption>
+        </figure>
+        <figure class="cita" data-revela>
+          <blockquote><p>«Qué lugar tan acogedor, la comida espectacular, deliciosa, riquísima. La atención de las chicas […] súper atentas y amables.»</p></blockquote>
+          <figcaption>Lina Marcela Z. · reseña en Google</figcaption>
+        </figure>
+        <figure class="cita" data-revela>
+          <blockquote><p>«Muy lindo sitio con mesas al aire libre. Tiene excelentes opciones de comida y bebida y excelente calidad-precio.»</p></blockquote>
+          <figcaption>Daiana A. · reseña en Google</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- DÓNDE ESTAMOS -->
+  <section class="visita seccion" id="visita">
+    <div class="visita__rejilla contenedor">
+      <div class="visita__texto">
+        <h2 class="titulo" data-revela>Passeig de Dintre, 4</h2>
+        <p class="visita__intro" data-revela>En el centro de Blanes, a una calle de la playa y del Passeig de Mar.</p>
+        <p class="estado estado--ficha" data-estado data-revela><span class="estado__punto" aria-hidden="true"></span><span data-estado-texto></span></p>
+        <dl class="ficha" data-revela>
+          <div>
+            <dt><svg class="icono" aria-hidden="true"><use href="#i-map-pin"/></svg>Dirección</dt>
+            <dd>Passeig de Dintre, 4<br>17300 Blanes, Girona</dd>
+          </div>
+          <div>
+            <dt><svg class="icono" aria-hidden="true"><use href="#i-clock"/></svg>Horario</dt>
+            <dd>Todos los días<br>de 8:30 a 23:00</dd>
+          </div>
+          <div>
+            <dt><svg class="icono" aria-hidden="true"><use href="#i-phone"/></svg>Reservas</dt>
+            <dd><a class="enlace enlace--simple" href="tel:+34972746643">972 74 66 43</a><br>Por teléfono</dd>
+          </div>
+          <div>
+            <dt><svg class="icono" aria-hidden="true"><use href="#i-credit-card"/></svg>Pago</dt>
+            <dd>Tarjeta y móvil</dd>
+          </div>
+        </dl>
+        <p class="visita__extra" data-revela>Aparcamiento de pago cerca, en el Passeig de Mar. También se prepara para llevar.</p>
+        <div class="visita__acciones" data-revela>
+          <a class="boton boton--verde" href="https://www.google.com/maps/dir/?api=1&amp;destination=Aroma%20caf%C3%A9%20Blanes%2C%20Passeig%20de%20Dintre%204%2C%2017300%20Blanes" target="_blank" rel="noopener">
+            <svg class="icono" aria-hidden="true"><use href="#i-map-pin"/></svg><span>Cómo llegar</span>
+          </a>
+          <a class="boton boton--contorno" href="tel:+34972746643">
+            <svg class="icono" aria-hidden="true"><use href="#i-phone"/></svg><span>Reservar mesa</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="mapa" data-mapa data-desvela>
+        <img class="mapa__foto" src="assets/img/calle-900.webp" srcset="assets/img/calle-900.webp 900w, assets/img/calle-1600.webp 1600w" sizes="(min-width: 1000px) 50vw, 100vw" width="1600" height="1200" loading="lazy" decoding="async" alt="El Passeig de Dintre de Blanes, peatonal y con árboles, con terrazas al fondo">
+        <div class="mapa__capa">
+          <button class="boton boton--claro" type="button" data-mapa-cargar>
+            <svg class="icono" aria-hidden="true"><use href="#i-map-pin"/></svg><span>Ver el mapa</span>
+          </button>
+          <p class="mapa__aviso">El mapa se carga desde Google Maps.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pie">
+  <div class="contenedor">
+    <div class="pie__rejilla">
+      <div class="pie__marca">
+        <p class="marca marca--pie"><span class="marca__nombre">Aroma Café</span><span class="marca__lugar">Blanes</span></p>
+        <p>Cafetería y bar con terraza en el centro de Blanes.</p>
+      </div>
+      <div>
+        <h2 class="pie__titulo">Dirección</h2>
+        <p>Passeig de Dintre, 4<br>17300 Blanes, Girona</p>
+      </div>
+      <div>
+        <h2 class="pie__titulo">Horario</h2>
+        <p>Todos los días<br>de 8:30 a 23:00</p>
+      </div>
+      <div>
+        <h2 class="pie__titulo">Contacto</h2>
+        <p><a class="enlace enlace--simple" href="tel:+34972746643">972 74 66 43</a><br>
+        <a class="enlace enlace--simple" href="https://www.instagram.com/aroma_cafe_blanes/" target="_blank" rel="noopener"><svg class="icono" aria-hidden="true"><use href="#i-instagram-logo"/></svg>@aroma_cafe_blanes</a></p>
+      </div>
+    </div>
+    <svg class="adorno adorno--pie" viewBox="0 0 120 10" aria-hidden="true"><path d="M0 5h50M70 5h50" stroke="currentColor"/><path d="M60 .8 64.2 5 60 9.2 55.8 5z" fill="currentColor"/></svg>
+    <p class="pie__legal">© <span data-anio>2026</span> Aroma Café Blanes · Fotografías del local y de sus clientes en Google e Instagram.</p>
+  </div>
+</footer>
+
+<dialog class="visor" data-visor-dialogo aria-label="Fotografía ampliada">
+  <figure class="visor__figura">
+    <figcaption class="visor__pie" data-visor-pie></figcaption>
+  </figure>
+  <button class="visor__boton visor__boton--cerrar" type="button" aria-label="Cerrar" data-visor-cerrar><svg class="icono" aria-hidden="true"><use href="#i-x"/></svg></button>
+  <button class="visor__boton visor__boton--ant" type="button" aria-label="Foto anterior" data-visor-ant><svg class="icono" aria-hidden="true"><use href="#i-caret-left"/></svg></button>
+  <button class="visor__boton visor__boton--sig" type="button" aria-label="Foto siguiente" data-visor-sig><svg class="icono" aria-hidden="true"><use href="#i-caret-right"/></svg></button>
+</dialog>
+</body>
+</html>

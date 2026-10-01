@@ -1,0 +1,10 @@
+{
+  "name": "aroma-cafe-tools",
+  "private": true,
+  "type": "module",
+  "description": "Herramientas de desarrollo (no se suben al hosting)",
+  "dependencies": {
+    "@phosphor-icons/core": "^2.1.1",
+    "sharp": "^0.34.5"
+  }
+}
