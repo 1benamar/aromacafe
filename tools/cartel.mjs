@@ -1,9 +1,9 @@
 // Convierte una foto real en ilustración de "etiqueta impresa": se reduce a
 // tintas planas mapeando la luminosidad sobre la paleta del cartel.
-// Uso: node cartel.mjs origen.jpg salida.webp ancho alto left top width height
+// Uso: node cartel.mjs origen.jpg salida.webp ancho alto left top width height [margen-superior]
 import sharp from "sharp";
 
-const [src, out, W, H, l, t, w, h] = process.argv.slice(2);
+const [src, out, W, H, l, t, w, h, arriba = "0"] = process.argv.slice(2);
 const ANCHO = Number(W), ALTO = Number(H);
 // Rampa de tintas (de sombra a luz): tinta verde, verde, rojo, mostaza, crema
 // Tintas planas, de sombra a luz: tinta verde, verde toldo, rojo, mostaza, crema
@@ -12,6 +12,8 @@ const CORTES = [0.22, 0.42, 0.62, 0.82];
 
 let img = sharp(src).rotate();
 if (w) img = img.extract({ left: +l, top: +t, width: +w, height: +h });
+// margen superior del color de la sombra, para bajar el motivo dentro del óvalo
+if (+arriba) img = sharp(await img.extend({ top: +arriba, background: { r: 15, g: 40, b: 30 } }).toBuffer());
 const { data, info } = await img
   .resize(ANCHO, ALTO, { fit: "cover" })
   .median(5)
