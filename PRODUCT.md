@@ -48,15 +48,11 @@ llamar para reservar y cómo llegar.
 
 ## Tono y compromisos de marca
 
-- Formal, sobria y elegante, como el propio local. La fotografía lleva el
-  peso visual; las animaciones son pocas y discretas.
-- Identidad real del café: rótulo y toldo verde botella con letras doradas
-  en romana clásica, mesas de mármol, sillas de bistró de ratán, barra
-  dorada ondulada, taburetes de terciopelo verde. La carta impresa también es
-  verde con titulares dorados.
-- Titulares en caja baja, tamaño contenido, sin cursivas ni palabras
-  resaltadas en color. Sin antetítulos numerados, marquesinas ni etiquetas
-  monoespaciadas.
+- Estilo cartel elegido por el usuario (octubre de 2026) a partir de la
+  referencia de la galería de impeccable «Trattoria da Nonna Lucia»: la web
+  como la etiqueta de una lata de café, con colores vivos y letras de cartel.
+- Se mantienen los datos y la identidad real del café: el verde del toldo
+  manda, el rótulo dice AROMA CAFÉ y el emblema es la fachada real.
 - Solo en español.
 
 ## Pendiente del negocio

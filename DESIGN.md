@@ -1,172 +1,145 @@
 ---
 name: Aroma Café Blanes
-description: La web como la carta impresa del propio café, verde botella y oro sobre mármol.
+description: La web como la etiqueta de una lata de café antigua, en el verde del toldo con mostaza, rojo y azul de cartel.
 colors:
-  marmol: "#F5F4F0"
-  marmol-2: "#ECEAE3"
-  tinta: "#17231F"
-  tinta-2: "#4A5752"
-  verde: "#1F3B33"
-  verde-2: "#284A40"
-  verde-hondo: "#13251F"
-  oro: "#C9AB72"
-  marfil: "#F2EDE1"
+  verde: "#1C6040"
+  verde-hondo: "#134630"
+  mostaza: "#F0B830"
+  rojo: "#BF3922"
+  rojo-hondo: "#9C2C18"
+  azul: "#1D3F7A"
+  crema: "#F9F0DA"
+  papel: "#FFF8E8"
+  tinta: "#0F281E"
 typography:
   display:
-    fontFamily: "Cormorant Garamond, Iowan Old Style, Palatino, Georgia, serif"
-    fontSize: "clamp(2.7rem, 1.6rem + 3.6vw, 5rem)"
-    fontWeight: 500
+    fontFamily: "Abril Fatface, Rockwell Extra Bold, Georgia, serif"
+    fontSize: "clamp(2.4rem, 5.4vw, 4.4rem)"
+    fontWeight: 400
     lineHeight: 1.02
-    letterSpacing: "-0.015em"
   headline:
-    fontFamily: "Cormorant Garamond, Georgia, serif"
-    fontSize: "clamp(2.15rem, 1.55rem + 2.1vw, 3.35rem)"
-    fontWeight: 500
-    lineHeight: 1.06
-    letterSpacing: "-0.01em"
-  title:
-    fontFamily: "Cormorant Garamond, Georgia, serif"
-    fontSize: "1.5rem"
-    fontWeight: 600
-    lineHeight: 1.3
+    fontFamily: "Abril Fatface, Georgia, serif"
+    fontSize: "clamp(1.9rem, 2.6vw, 2.6rem)"
+    fontWeight: 400
+    lineHeight: 1
+  label:
+    fontFamily: "Antonio, Arial Narrow, sans-serif"
+    fontSize: "1.15rem"
+    fontWeight: 700
+    letterSpacing: "0.1em"
   body:
-    fontFamily: "Jost, Avenir Next, Segoe UI, system-ui, sans-serif"
+    fontFamily: "Jost, Segoe UI, system-ui, sans-serif"
     fontSize: "1.0625rem"
     fontWeight: 400
-    lineHeight: 1.65
-  label:
-    fontFamily: "Jost, system-ui, sans-serif"
-    fontSize: "0.8125rem"
-    fontWeight: 500
-    letterSpacing: "0.14em"
-  wordmark:
-    fontFamily: "Cormorant Garamond, Georgia, serif"
-    fontSize: "1.3rem"
-    fontWeight: 600
-    letterSpacing: "0.17em"
+    lineHeight: 1.55
 rounded:
   base: "2px"
 spacing:
-  margen: "clamp(20px, 5vw, 56px)"
-  seccion: "clamp(88px, 10vw, 152px)"
-  ancho: "1240px"
+  margen: "clamp(1.25rem, 4vw, 3rem)"
+  seccion: "clamp(3.5rem, 7vw, 6rem)"
+  ancho: "90rem"
 components:
-  button-claro:
-    backgroundColor: "{colors.marfil}"
-    textColor: "{colors.verde}"
-    rounded: "{rounded.base}"
-    padding: "0 26px"
-    height: "50px"
-  button-verde:
-    backgroundColor: "{colors.verde}"
-    textColor: "{colors.marfil}"
-    rounded: "{rounded.base}"
-    padding: "0 26px"
-    height: "50px"
-  button-verde-hover:
-    backgroundColor: "{colors.verde-2}"
+  boton:
+    backgroundColor: "{colors.mostaza}"
+    textColor: "{colors.tinta}"
+    typography: "{typography.label}"
+    padding: "1rem 1.35rem"
+  boton-hover:
+    backgroundColor: "{colors.crema}"
+  boton-azul:
+    backgroundColor: "{colors.azul}"
+    textColor: "{colors.crema}"
+  boton-azul-hover:
+    backgroundColor: "{colors.rojo}"
 ---
 
 # Design System: Aroma Café Blanes
 
 ## Overview
 
-**Creative North Star: "La carta de la casa"**
+**Creative North Star: "La lata de Aroma"**
 
-La web se viste como el propio local y su carta impresa: rótulo y toldo verde
-botella con letras doradas en romana clásica, mesas de mármol, sillas de
-bistró y una barra dorada. La fotografía real del café lleva el peso visual;
-la tipografía y el color se limitan a enmarcarla con sobriedad.
+La página es la etiqueta de una lata de café antigua hecha para Aroma Café:
+marco de doble filete mostaza, rótulo en arco, un emblema serigrafiado de la
+fachada real y una tira recortable con el estado y el botón de llamar. El
+estilo lo eligió el usuario a partir de una referencia de la galería de
+impeccable (Trattoria da Nonna Lucia); se aplica con los colores y los datos
+reales del café.
 
-Densidad baja, mucho aire y una sola voz de color. El verde ocupa regiones
-enteras (la carta, el pie) y el oro solo aparece en filetes, rombos y
-detalles sobre verde. Movimiento escaso y lento, como pasar una página.
+La información útil es la portada: horario de la semana con hoy marcado,
+estado abierto o cerrado, teléfono grande y dirección. Cada sección es un
+campo de color plano unido a la siguiente por una costura festoneada.
 
 **Key Characteristics:**
-- Fondo mármol, tinta verde casi negra, verde botella del toldo como color de marca.
-- Romana clásica para titulares y rótulo; sans geométrica para texto e interfaz.
-- Rombo dorado de la carta impresa como único ornamento.
-- Fotos reales del local y de clientes, sin ilustraciones ni texturas inventadas.
+- Campos de color plano: verde, rojo, azul y crema, cosidos con festones.
+- Rótulo y titulares en Abril Fatface; etiquetas en Antonio condensada.
+- Fotos reales enmarcadas como cromos y copias de papel, ligeramente giradas.
+- Emblema hecho con la foto de la fachada reducida a cinco tintas planas.
 
 ## Colors
 
-Paleta tomada del local: verde del toldo y de la carta, oro de las letras y la barra, mármol de las mesas.
+Paleta de cartel: el verde del toldo manda, el resto son tintas de imprenta.
 
 ### Primary
-- **Verde toldo** (#1F3B33): fondo de la carta, botón principal sobre mármol, iconos.
-- **Verde hondo** (#13251F): pie, menú móvil, base de la portada.
-- **Verde realce** (#284A40): estado hover del botón verde.
+- **Verde toldo** (#1C6040): campo de la etiqueta y de La casa.
+- **Mostaza rótulo** (#F0B830): filetes dobles, nombres de panel, botones, tira recortable, día de hoy.
 
 ### Secondary
-- **Oro rótulo** (#C9AB72): filetes, rombos, indicador de pestaña, estrellas, títulos del pie. Solo sobre verde o como detalle gráfico, nunca como color de texto sobre mármol.
+- **Rojo tinta** (#BF3922): campos del recorrido del día y del cierre, encabezados de la carta, sellos.
+- **Azul cobalto** (#1D3F7A): franja superior, campo de la carta, pie y texto de la hoja de carta.
 
 ### Neutral
-- **Mármol** (#F5F4F0): fondo de página.
-- **Mármol veteado** (#ECEAE3): sección de opiniones y fondos de foto mientras carga.
-- **Tinta** (#17231F): titulares y texto destacado.
-- **Tinta suave** (#4A5752): texto corrido (6,7:1 sobre mármol).
-- **Marfil** (#F2EDE1): texto sobre verde; al 74 % para texto secundario.
+- **Crema** (#F9F0DA): texto sobre campos de color y hoja de la carta.
+- **Papel** (#FFF8E8): marcos de cromos y copias de fotos.
+- **Tinta** (#0F281E): texto sobre mostaza y papel.
 
 ### Named Rules
-**La regla de la voz única.** Un solo color de marca (verde) y un solo acento (oro). Nada de azules, terracotas ni degradados de color.
+**La regla del contraste de imprenta.** Mostaza solo en texto grande sobre verde (4,1:1) y en cualquier tamaño sobre azul o como fondo de texto tinta; el texto pequeño sobre verde y rojo va en crema.
 
 ## Typography
 
-**Display Font:** Cormorant Garamond (con Iowan Old Style, Palatino, Georgia)
-**Body Font:** Jost (con Avenir Next, Segoe UI, system-ui)
+**Display Font:** Abril Fatface (con Rockwell Extra Bold, Georgia)
+**Label Font:** Antonio (con Arial Narrow)
+**Body Font:** Jost (con Segoe UI, system-ui)
 
-**Character:** la romana de pesos medios recuerda las letras del rótulo; Jost, la sans de la carta impresa.
+**Character:** gruesa de lata antigua para el rótulo, condensada de etiqueta para todo lo que es dato, y una sans limpia para leer.
 
 ### Hierarchy
-- **Display** (500, clamp(2.7rem → 5rem), 1.02): titular de portada, dos líneas.
-- **Headline** (500, clamp(2.15rem → 3.35rem), 1.06): titulares de sección.
-- **Title** (600, 1.5rem, 1.3): nombres de platos y momentos del día.
-- **Body** (400, 1.0625rem, 1.65): texto corrido, máximo unos 34rem.
-- **Label** (500, 0.8125rem, 0.14em, mayúsculas): solo botones, pestañas y pies de foto.
-
-### Named Rules
-**La regla del titular limpio.** Titulares en caja baja, sin cursivas, sin palabras resaltadas en color y sin antetítulos encima.
+- **Display** (400, clamp(2.4rem → 4.4rem), 1.02): titulares de sección.
+- **Headline** (400, clamp(1.9rem → 2.6rem)): nombres de panel (Horario, Reservas).
+- **Label** (700, 1.15rem, 0.1em, mayúsculas): botones, rótulos, platos, días, teléfono (hasta 6.2rem).
+- **Body** (400, 1.0625rem, 1.55): texto corrido y descripciones.
 
 ## Layout
 
-Contenedor de 1240px con margen lateral fluido clamp(20px, 5vw, 56px) y rejilla de 12 columnas en escritorio. Secciones con padding vertical clamp(88px, 10vw, 152px). Cabeceras de sección centradas (rombo, titular, una frase). Por debajo de 1000px las rejillas pasan a una columna; por debajo de 1080px la navegación pasa a menú a pantalla completa. En móvil la foto de portada ocupa la parte superior con el rótulo entero y se funde con el verde donde va el texto.
+Primera pantalla en tres paneles (horario, frente, reservas) dentro de un marco de 90rem; a 1100px el frente pasa arriba y a 820px los paneles se apilan y la tira recortable queda fija abajo. Secciones de 84rem con márgenes clamp(1.25rem, 4vw, 3rem). La carta va en tres columnas sobre una hoja crema, que pasan a dos y a una.
 
 ## Elevation & Depth
 
-Superficies planas; la profundidad la dan las fotos. Las fotografías llevan una sombra suave y tintada en verde, y un contorno de 1px al 8 % de negro.
-
-### Shadow Vocabulary
-- **Foto** (`box-shadow: 0 1px 2px rgb(19 37 31 / 0.06), 0 18px 40px -18px rgb(19 37 31 / 0.35)`): fotos de La casa, el recorrido del día, la galería y el mapa.
+Plano, como un impreso. La única profundidad la tienen los cromos y las copias de fotos, con sombra de papel (`0 16px 30px -14px` tintada del campo).
 
 ## Shapes
 
-Esquinas casi rectas (2px) en botones, fotos y paneles. Filetes de 1px. El rombo (cuadrado girado 45°) marca listas, platos y el adorno de las cabeceras.
+Rectángulos rectos, filetes dobles de 6px, óvalo con doble aro mostaza para el emblema, cinta con colas recortadas, medalla circular con texto en anillo, festones de 22px entre secciones y dientes de 12px en la tira recortable.
 
 ## Components
 
-### Buttons
-- **Shape:** casi recto (2px), alto 50px, etiqueta en mayúsculas espaciadas.
-- **Primary:** marfil sobre verde o foto (`button-claro`); verde sobre mármol (`button-verde`).
-- **Secondary:** contorno de 1px (marfil al 55 % sobre foto, tinta al 28 % sobre mármol).
-- **Hover / Press:** cambio de fondo o borde en 220ms; escala 0.96 al pulsar.
+### Botones
+- **Mostaza:** fondo mostaza, texto tinta, Antonio 700 en mayúsculas; al pasar, crema. Escala 0.96 al pulsar.
+- **Azul:** en la tira recortable; al pasar, rojo.
 
-### Navigation
-Cabecera fija de 76px (64px en móvil), transparente sobre la portada y mármol translúcido después. Subrayado que crece al pasar el ratón; la sección activa se marca con un filete dorado de 2px.
+### Tira recortable
+Banda mostaza con borde dentado, estado de apertura en vivo, línea de corte discontinua y botón de llamar. Se despega de izquierda a derecha al cargar.
 
-### La carta (componente propio)
-Panel verde con celosía dorada al 7 % (la pared del local), pestañas con indicador dorado deslizante y platos en dos columnas marcados con un rombo dorado. Sin precios hasta que el negocio los confirme.
-
-### Del café a la copa (componente propio)
-Escenario fijo con tres fotos que se relevan con una cortinilla vertical al avanzar el texto. En móvil cada momento lleva su propia foto.
+### Sellos
+Etiquetas rojas giradas -4° («Popular», «De la casa») que se estampan con un golpe corto al entrar en pantalla. Solo para datos reales (platos más pedidos según Google, las bravas de la casa).
 
 ## Do's and Don'ts
 
 ### Do:
-- **Do** usar fotos reales del local o de clientes (Google e Instagram), optimizadas en WebP.
-- **Do** reservar el oro (#C9AB72) para filetes, rombos e indicadores.
-- **Do** mantener el registro de usted en los textos dirigidos al cliente.
+- **Do** mantener campos de color plano y filetes dobles mostaza.
+- **Do** usar solo fotos reales del café; para ilustraciones, pasar una foto real a tintas planas con `tools/cartel.mjs`.
 
 ### Don't:
-- **Don't** usar cursivas ni palabras en color dentro de los titulares.
-- **Don't** añadir antetítulos, números de sección, marquesinas o etiquetas monoespaciadas.
-- **Don't** inventar platos, servicios ni precios que el café no haya confirmado.
+- **Don't** inventar fechas de fundación, precios ni platos para rellenar sellos o medallas.
+- **Don't** poner texto pequeño en mostaza sobre verde ni sobre rojo.
