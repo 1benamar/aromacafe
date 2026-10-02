@@ -120,7 +120,14 @@ const tramoPlaya = costa.filter(([x]) => x > 900 && x < 1250);
 const angPlaya = Math.atan2(tramoPlaya[tramoPlaya.length - 1][1] - tramoPlaya[0][1], tramoPlaya[tramoPlaya.length - 1][0] - tramoPlaya[0][0]) * 180 / Math.PI;
 const medPlaya = tramoPlaya[Math.floor(tramoPlaya.length / 2)];
 
-let svg = `<svg class="carta-nautica" viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid slice" role="img" aria-labelledby="carta-titulo">
+// Rumbos reales: del café al punto de costa más cercano y a sa Palomera (en metros)
+const playa = costa.filter(([x, y]) => y > aroma[1] - 200 && x < 1300)
+  .reduce((a, b) => (Math.hypot(b[0] - aroma[0], b[1] - aroma[1]) < Math.hypot(a[0] - aroma[0], a[1] - aroma[1]) ? b : a));
+const redondea = m => Math.round(m / 10) * 10;
+const distPlaya = redondea(Math.hypot(playa[0] - aroma[0], playa[1] - aroma[1]));
+const distPalomera = redondea(Math.hypot(palomera[0] - aroma[0], palomera[1] - aroma[1]));
+
+let svg = `<svg class="carta-nautica" viewBox="0 0 ${W} ${H}" data-dist-playa="${distPlaya}" data-dist-palomera="${distPalomera}" preserveAspectRatio="xMidYMid slice" role="img" aria-labelledby="carta-titulo">
 <title id="carta-titulo">Carta del centro de Blanes con Aroma Café en el Passeig de Dintre, a una calle de la playa</title>
 <defs>
   <clipPath id="ventana"><rect width="${W}" height="${H}"/></clipPath>
@@ -130,7 +137,7 @@ let svg = `<svg class="carta-nautica" viewBox="0 0 ${W} ${H}" preserveAspectRati
 <rect class="mar" width="${W}" height="${H}"/>
 <path class="bajo bajo--2" d="${d(costa)}"/>
 <path class="bajo bajo--1" d="${d(costa)}"/>
-<path class="sonda" d="${d(costa)}"/>
+<path class="sonda" pathLength="1" d="${d(costa)}"/>
 <g class="plancha">
   <path class="tierra" d="${d(tierra, true)}"/>
   ${islotes.map(i => `<path class="tierra islote" d="${d(i, true)}"/>`).join("")}
@@ -138,9 +145,9 @@ let svg = `<svg class="carta-nautica" viewBox="0 0 ${W} ${H}" preserveAspectRati
   <path class="calle calle--peatonal" d="${calles.peatonal.map(p => d(p)).join("")}"/>
   <path class="calle calle--mayor" d="${calles.mayor.map(p => d(p)).join("")}"/>
   <path class="dintre" d="${dintre.map(p => d(p, true)).join("")}"/>
-  <path class="espigon" d="${espigones.map(p => d(p)).join("")}"/>
-  <path class="linea-costa" d="${d(costa)}"/>
-  ${islotes.map(i => `<path class="linea-costa" d="${d(i, true)}"/>`).join("")}
+  <path class="espigon" pathLength="1" d="${espigones.map(p => d(p)).join("")}"/>
+  <path class="linea-costa" pathLength="1" d="${d(costa)}"/>
+  ${islotes.map(i => `<path class="linea-costa" pathLength="1" d="${d(i, true)}"/>`).join("")}
 </g>
 ${reticula.map(g => g.x != null ? `<line class="reticula" x1="${r1(g.x)}" y1="0" x2="${r1(g.x)}" y2="${H}"/>` : `<line class="reticula" x1="0" y1="${r1(g.y)}" x2="${W}" y2="${r1(g.y)}"/>`).join("")}
 <text class="rot rot--pueblo" x="1120" y="120">BLANES</text>
@@ -152,7 +159,23 @@ ${reticula.map(g => g.x != null ? `<line class="reticula" x1="${r1(g.x)}" y1="0"
 <g class="cima" transform="translate(${r1(palomera[0])} ${r1(palomera[1])})"><g class="cima__cuerpo"><path d="M0 -7L6 4H-6Z"/><text x="12" y="5">sa Palomera</text></g></g>
 <text class="rot rot--agua rot--peq" x="${r1(palomera[0] + 40)}" y="${r1(palomera[1] + 70)}">inicio de la Costa Brava</text>
 ${rosa(1620, 760, 74)}
-<g class="faro" transform="translate(${r1(aroma[0])} ${r1(aroma[1])})"><g class="faro__cuerpo">
+<g class="rumbos">
+  <path class="rumbo" pathLength="1" d="M${r1(aroma[0])} ${r1(aroma[1])}L${r1(playa[0])} ${r1(playa[1])}"/>
+  <path class="rumbo" pathLength="1" d="M${r1(aroma[0])} ${r1(aroma[1])}L${r1(palomera[0])} ${r1(palomera[1] - 10)}"/>
+  <text class="rumbo__txt" transform="translate(${r1(playa[0] + 14)} ${r1(playa[1] + 26)})">${distPlaya} m a la playa</text>
+  <text class="rumbo__txt" transform="translate(${r1((aroma[0] + palomera[0]) / 2 - 150)} ${r1((aroma[1] + palomera[1]) / 2 + 6)})">${distPalomera} m a sa Palomera</text>
+</g>
+<g class="punto" data-punto="playa" tabindex="0" role="button" aria-label="Platja de Blanes" transform="translate(${r1(playa[0] + 60)} ${r1(playa[1] + 40)})"><circle class="punto__zona" r="26"/><circle class="punto__aro" r="9"/><path class="punto__cruz" d="M-15 0H15M0 -15V15"/></g>
+<g class="punto" data-punto="palomera" tabindex="0" role="button" aria-label="sa Palomera" transform="translate(${r1(palomera[0] + 40)} ${r1(palomera[1] + 20)})"><circle class="punto__zona" r="26"/><circle class="punto__aro" r="9"/><path class="punto__cruz" d="M-15 0H15M0 -15V15"/></g>
+<g class="punto" data-punto="puerto" tabindex="0" role="button" aria-label="Port de Blanes" transform="translate(1560 420)"><circle class="punto__zona" r="26"/><circle class="punto__aro" r="9"/><path class="punto__cruz" d="M-15 0H15M0 -15V15"/></g>
+<g class="recuadro" transform="translate(1040 168)">
+  <path class="recuadro__guia" pathLength="1" d="M0 186L${r1(aroma[0] - 1040 + 10)} ${r1(aroma[1] - 168 - 12)}"/>
+  <rect class="recuadro__marco" x="-8" y="-8" width="296" height="198"/>
+  <image href="assets/img/fachada-1000.webp" x="0" y="0" width="280" height="158" preserveAspectRatio="xMidYMid slice"/>
+  <rect class="recuadro__filete" x="0" y="0" width="280" height="158"/>
+  <text class="recuadro__pie" x="0" y="180">Vista A · la fachada en el Passeig de Dintre</text>
+</g>
+<g class="faro punto punto--faro" data-punto="aroma" tabindex="0" role="button" aria-label="Aroma Café, Passeig de Dintre 4" transform="translate(${r1(aroma[0])} ${r1(aroma[1])})"><g class="faro__cuerpo"><circle class="punto__zona" r="30"/>
   <path class="faro__destello" d="M0 0C10 -18 30 -34 44 -40C40 -26 24 -8 0 0Z"/>
   <circle class="faro__halo" r="15"/>
   <circle class="faro__punto" r="6.5"/>
